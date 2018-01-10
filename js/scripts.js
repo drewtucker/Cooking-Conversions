@@ -1,37 +1,47 @@
-
-
 var fahrenheit = parseInt(prompt("Enter degrees in farenheit:"));
 
 var celcius = parseInt(prompt("Enter degrees in Celcius:"));
 
-var convertToCelcius = function(fahrenheit) {
-  return ((fahrenheit - 32) * .5556);
+
+
+//TEMPERATURES
+
+function convertToCelcius(number, unit){
+  if(unit === "fahrenheit") {
+  return ((fahrenheit-32) * 0.5556);
+  }
+  else if (unit === "Kelvin") {
+  return (number - 273.15);
+  }
 }
 
- alert(convertToCelcius(fahrenheit, 32, .5556));
-
-
-var convertToFahrenheit = function(celcius) {
-	return ((celcius * 1.8) + 32);
+function convertToFahrenheit(number, unit){
+  if(unit === "Celcius") {
+    return ((number * 1.8) + 32);
+  }
+  else if(unit === "Kelvin") {
+    return ((number - 273) * (9/5) + 32);
+  }
 }
 
-alert(convertToFahrenheit(celcius, 1.8, 32));
-
-
-//GALLONS TO LITERS AND GALLONS TO LITERS//
-
-var gallon = parseInt(prompt("Enter gallons"));
-
-var liter = parseInt(prompt("Enter liters"));
-
-var gallonsToLiters = function(gallon) {
-	return gallon / 0.26417;
+function convertToKelvin(number, unit){
+  if(unit === "Celcius") {
+    return (number + 273.15);
+  }
+  else if(unit === "fahrenheit") {
+    return ((number + 459.67) * (5/9));
+  }
 }
 
-var litersToGallons = function(liter) {
-	return liter * 0.26417;
+//LIQUID VOLUME
+
+// var gallon = parseInt(prompt("Enter gallons"));
+//
+// var liter = parseInt(prompt("Enter liters"));
+
+function gallonstoLiters(gallon){
+  return gallon / 0.26417;
 }
 
-alert(gallonsToLiters(gallon, 0.26417));
-
-alert(litersToGallons(liter, 0.26417));
+function litersToGallons(liter){
+  return liter * 0.26417;
