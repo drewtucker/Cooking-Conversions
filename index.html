@@ -12,21 +12,65 @@
   <body>
     <div class="container">
       <h1>Unit Converter</h1>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="liquids">Convert Liquids</label>
 
 
-      <select class="form-control" id="liquids">
-        <option>Liters</option>
-        <option>Gallons</option>
-        <option>Quarts</option>
-        <option>Cups</option>
-      </select>
+          <select class="form-control" id="liquids">
+            <option>Liters</option>
+            <option>Gallons</option>
+          </select>
+          <input id="liquidEntry" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <p>to:</p>
+          <button type="button" name="convert">Convert</button>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="liquids"></label>
+            <select class="form-control" id="liquids">
+              <option>Liters</option>
+              <option>Gallons</option>
+            </select>
+            <h3 class="liquidResult"></h3>
+          </div>
+        </div>
+      </div>
+<br>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="temperatures">Convert Temperatures</label>
 
 
-      <select class="form-control" id="temperatures">
-        <option>Fahrenheit</option>
-        <option>Celcius</option>
-        <option>Kelvin</option>
-      </select>
+          <select class="form-control" id="temperatures" onchange="this.form.submit()">
+            <option>Fahrenheit</option>
+            <option>Celsius</option>
+            <option>Kelvin</option>
+          </select>
+          <input id="temperatureEntry" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <p>to:</p>
+          <button type="button" name="convert">Convert</button>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="temperatures"></label>
+            <select class="form-control" id="temperatures">
+              <option>Fahrenheit</option>
+              <option>Celsius</option>
+              <option>Kelvin</option>
+            </select>
+            <h3 class="tempResult"></h3>
+          </div>
+        </div>
+      </div>
 
     </div>
   </body>

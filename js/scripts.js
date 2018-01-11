@@ -1,14 +1,8 @@
-var fahrenheit = parseInt(prompt("Enter degrees in farenheit:"));
-
-var celcius = parseInt(prompt("Enter degrees in Celcius:"));
-
-
-
 //TEMPERATURES
 
-function convertToCelcius(number, unit){
-  if(unit === "fahrenheit") {
-  return ((fahrenheit-32) * 0.5556);
+function convertToCelsius(number, unit){
+  if(unit === "Fahrenheit") {
+  return ((number - 32) * 0.5556);
   }
   else if (unit === "Kelvin") {
   return (number - 273.15);
@@ -16,7 +10,7 @@ function convertToCelcius(number, unit){
 }
 
 function convertToFahrenheit(number, unit){
-  if(unit === "Celcius") {
+  if(unit === "Celsius") {
     return ((number * 1.8) + 32);
   }
   else if(unit === "Kelvin") {
@@ -25,10 +19,10 @@ function convertToFahrenheit(number, unit){
 }
 
 function convertToKelvin(number, unit){
-  if(unit === "Celcius") {
+  if(unit === "Celsius") {
     return (number + 273.15);
   }
-  else if(unit === "fahrenheit") {
+  else if(unit === "Fahrenheit") {
     return ((number + 459.67) * (5/9));
   }
 }
@@ -45,3 +39,10 @@ function gallonstoLiters(gallon){
 
 function litersToGallons(liter){
   return liter * 0.26417;
+
+}
+
+
+$(document).ready(function() {
+  $("form")
+})
